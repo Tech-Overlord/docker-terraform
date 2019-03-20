@@ -7,9 +7,9 @@ RUN set -xe \
 	&& apt-get install wget unzip -y
 
 # Download and extract Terraform.
-RUN wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_386.zip \
-	&& unzip terraform_0.11.11_linux_386.zip -d /bin/ \
-	&& rm -r terraform_0.11.11_linux_386.zip
+RUN wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_386.zip \
+  && unzip terraform_0.11.13_linux_386.zip -d /bin/ \
+  && rm -rf terraform_0.11.13_linux_386.zip
 
 # Initialize
 CMD ["/bin/bash"]
